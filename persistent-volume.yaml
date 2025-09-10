@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: persistent-volume
+  labels:
+    vol: mysql
+spec:
+  capacity:
+    storage: 1Gi           # Corrected storage size
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /data/app
